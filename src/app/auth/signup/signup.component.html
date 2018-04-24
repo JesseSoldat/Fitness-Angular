@@ -1,0 +1,39 @@
+<section class="signup-form">
+  <form>
+    <mat-form-field>
+      <input type="email" 
+        matInput
+        placeholder="Your email"
+        email
+        required
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password"
+        matInput
+        placeholder="Your password"
+        required
+        minlength="6"
+      />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Your birthdate"
+        [matDatepicker]="picker"
+      />
+      <mat-datepicker-toggle
+        matSuffix [for]="picker">
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-checkbox color="primary"
+      required>
+      Do you agree to Terms and Conditions?
+    </mat-checkbox>
+    <button type="submit"
+      mat-raised-button>
+      Submit
+    </button>
+  </form>
+</section>
