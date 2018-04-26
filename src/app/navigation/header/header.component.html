@@ -8,7 +8,10 @@
   <div>
     <a routerLink="/">NG Fitness</a>
   </div>
-  <div fxFlex fxLayout fxLayoutAlign="flex-end">
+  <div fxFlex 
+    fxLayout 
+    fxLayoutAlign="flex-end"
+    fxHide.xs>
     <ul class="navigation-items"
       fxLayout
       fxLayoutGap="15px"
@@ -18,6 +21,15 @@
       </li>
       <li>
         <a routerLink="/login">Login</a>
+      </li>
+      <li>
+        <a routerLink="/training">Training</a>
+      </li>
+      <li>
+        <a style="cursor: pointer"
+          (click)="onLogout()">
+          Logout
+        </a>
       </li>
     </ul>
   </div>
