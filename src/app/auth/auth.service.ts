@@ -8,7 +8,7 @@ import { AuthData } from './auth-data.model';
 @Injectable()
 export class AuthService {
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   registerUser(authData: AuthData) {
 
