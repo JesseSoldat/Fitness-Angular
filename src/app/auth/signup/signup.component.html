@@ -5,7 +5,7 @@
     #f="ngForm"
     (ngSubmit)="onSubmit(f)">
     <mat-form-field>
-      <input type="email" 
+      <input type="email"
         matInput
         placeholder="Your email"
         email
@@ -21,7 +21,7 @@
         Email is invalid
       </mat-error>
     </mat-form-field>
-    <mat-form-field 
+    <mat-form-field
       hintLabel="Should be at least 6 characters long.">
       <input type="password"
         matInput
@@ -56,12 +56,14 @@
       required>
       Do you agree to Terms and Conditions?
     </mat-checkbox>
-    <button type="submit"
+    <button *ngIf="!isLoading"
+      type="submit"
       [disabled]="f.invalid"
       mat-raised-button
       color="primary"
     >
       Submit
     </button>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
   </form>
 </section>
