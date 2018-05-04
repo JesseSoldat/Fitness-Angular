@@ -8,24 +8,24 @@
   <div>
     <a routerLink="/">NG Fitness</a>
   </div>
-  <div fxFlex 
-    fxLayout 
+  <div fxFlex
+    fxLayout
     fxLayoutAlign="flex-end"
     fxHide.xs>
     <ul class="navigation-items"
       fxLayout
       fxLayoutGap="15px"
     >
-      <li>
+      <li *ngIf="!isAuth">
         <a routerLink="/signup">Signup</a>
       </li>
-      <li>
+      <li *ngIf="!isAuth">
         <a routerLink="/login">Login</a>
       </li>
-      <li>
+      <li *ngIf="isAuth">
         <a routerLink="/training">Training</a>
       </li>
-      <li>
+      <li *ngIf="isAuth">
         <a style="cursor: pointer"
           (click)="onLogout()">
           Logout
